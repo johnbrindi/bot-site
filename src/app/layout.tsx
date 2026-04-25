@@ -5,25 +5,36 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Berlin Snoww Budd flakey Smokey | Premium Delivery Bot",
-  description: "The #1 Telegram bot in Berlin for top-shelf buds, flakey premium, and smokey imports. Fast, discreet express delivery. Order 24/7 via our secure chat application.",
-  keywords: "Berlin, weed, weedy, delivery bot, telegram bot, snoww, flakey, smokey, premium, top-shelf",
+  metadataBase: new URL("https://bot-site-cyan.vercel.app"),
+  title: "Berlin Snoww Budd flakey Smokey | #1 Premium Delivery Bot",
+  description: "Get the best Snoww, Flakey, and Smokey selections in Berlin. #1 Telegram bot for top-shelf buds with fast, discreet, express delivery. Secure and private 24/7 service.",
+  keywords: "Berlin weed delivery, telegram bot berlin, snoww buds, flakey premium, smokey imports, discreet delivery berlin, top shelf buds, berlin cannabis bot, fast delivery berlin",
+  alternates: {
+    canonical: "https://bot-site-cyan.vercel.app",
+  },
   openGraph: {
-    title: "Berlin Snoww Budd flakey Smokey",
-    description: "Premium Quality, Fast & Discreet Delivery in Berlin. Order via Telegram.",
-    url: "https://berlin-snoww-delivery.com",
+    title: "Berlin Snoww Budd flakey Smokey | Premium Delivery Bot",
+    description: "Premium Quality, Fast & Discreet Delivery in Berlin. Order 24/7 via Telegram.",
+    url: "https://bot-site-cyan.vercel.app",
     siteName: "Berlin Snoww Budd",
     images: [
       {
-        url: "https://images.unsplash.com/photo-1508739773434-c26b3d09e071?w=1200&q=80",
+        url: "/og-image.jpg", // Ensure this exists in public folder or use the Unsplash one
         width: 1200,
         height: 630,
-        alt: "Premium Buds Delivery",
+        alt: "Berlin Snoww Budd - Premium Delivery",
       },
     ],
-    locale: "en_US",
+    locale: "en_DE",
     type: "website",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Berlin Snoww Budd flakey Smokey",
+    description: "Fast & Discreet Premium Delivery in Berlin via Telegram.",
+    images: ["/og-image.jpg"],
+  },
+  category: "Business",
 };
 
 export default function RootLayout({
@@ -41,14 +52,18 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "SoftwareApplication",
               "name": "Berlin Snoww Budd flakey Smokey",
-              "url": "https://t.me/Berlin_weedyBot",
-              "applicationCategory": "ChatApplication",
+              "url": "https://bot-site-cyan.vercel.app",
+              "applicationCategory": "BusinessApplication",
               "operatingSystem": "Telegram",
-              "description": "An automated Telegram delivery bot providing discreet, secure access to premium buds, flakey and smokey selections in Berlin.",
+              "description": "Premium automated Telegram delivery service for Snoww, Flakey and Smokey selections in Berlin. Express discreet delivery guaranteed.",
+              "serviceArea": {
+                "@type": "City",
+                "name": "Berlin"
+              },
               "offers": {
                 "@type": "Offer",
                 "price": "0",
-                "priceCurrency": "USD"
+                "priceCurrency": "EUR"
               }
             })
           }}
