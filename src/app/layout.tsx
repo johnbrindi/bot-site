@@ -41,7 +41,7 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "SoftwareApplication",
               "name": "Berlin Snoww Budd flakey Smokey",
-              "url": "https://t.me/Berlin_weedy",
+              "url": "https://t.me/Berlin_weedyBot",
               "applicationCategory": "ChatApplication",
               "operatingSystem": "Telegram",
               "description": "An automated Telegram delivery bot providing discreet, secure access to premium buds, flakey and smokey selections in Berlin.",

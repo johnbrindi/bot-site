@@ -1,65 +1,56 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <main className="flex flex-col items-center justify-center min-h-screen p-8 lg:p-24 bg-gradient-to-br from-gray-900 via-green-950 to-black text-center relative overflow-hidden">
+      
+      {/* Background Effect */}
+      <div className="absolute top-0 left-0 w-full h-full bg-[url('https://images.unsplash.com/photo-1508739773434-c26b3d09e071?w=2000&q=50')] opacity-10 bg-cover bg-center" />
+      <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent to-black/90" />
+
+      <div className="relative z-10 max-w-3xl flex flex-col items-center">
+        <h1 className="text-5xl lg:text-7xl font-extrabold tracking-tight mb-6 bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-emerald-200">
+          Berlin Snoww Budd
+        </h1>
+        
+        <p className="text-xl lg:text-2xl text-gray-300 mb-8 max-w-2xl font-light">
+          Your #1 automated Telegram delivery bot for <span className="text-white font-semibold">top-shelf buds</span>, <span className="text-white font-semibold">flakey premium</span>, and <span className="text-white font-semibold">smokey imports</span> in Berlin.
+        </p>
+
+        <div className="flex flex-wrap justify-center gap-4 mb-12">
+          <div className="flex items-center space-x-2 bg-white/10 backdrop-blur-md px-4 py-2 rounded-full border border-white/20">
+            <span className="text-green-400">⚡</span>
+            <span className="text-sm font-medium">Express Delivery</span>
+          </div>
+          <div className="flex items-center space-x-2 bg-white/10 backdrop-blur-md px-4 py-2 rounded-full border border-white/20">
+            <span className="text-green-400">🔒</span>
+            <span className="text-sm font-medium">Discreet Packaging</span>
+          </div>
+          <div className="flex items-center space-x-2 bg-white/10 backdrop-blur-md px-4 py-2 rounded-full border border-white/20">
+            <span className="text-green-400">🌿</span>
+            <span className="text-sm font-medium">Premium Quality</span>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+
+        <Link 
+          href="https://t.me/Berlin_weedyBot?start=website_promo"
+          target="_blank"
+          className="group relative inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-black transition-all duration-200 bg-green-400 border border-transparent rounded-full hover:bg-green-300 hover:scale-105 shadow-[0_0_40px_rgba(74,222,128,0.4)]"
+        >
+          Open Telegram Bot
+          <svg className="w-5 h-5 ml-2 -mr-1 transition-transform group-hover:translate-x-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd"></path></svg>
+        </Link>
+        
+        <p className="mt-6 text-sm text-gray-400">
+          Click to launch the bot. 100% secure & private.
+        </p>
+
+      </div>
+      
+      {/* Decorative Blur */}
+      <div className="absolute -bottom-32 -left-32 w-96 h-96 bg-green-500 rounded-full mix-blend-multiply filter blur-[128px] opacity-20" />
+      <div className="absolute -top-32 -right-32 w-96 h-96 bg-emerald-500 rounded-full mix-blend-multiply filter blur-[128px] opacity-20" />
+    </main>
   );
 }
